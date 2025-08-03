@@ -132,7 +132,9 @@ import "./assets/fonts/iconfont.css";
 import {
   cacheFirstRequest,
   isMiniInterface,
-  networkFirstRequest
+  networkFirstRequest,
+  applyKindleTheme,
+  removeKindleTheme
 } from "./plugins/helper";
 
 Date.prototype.format = function(fmt) {
@@ -387,41 +389,13 @@ export default {
       `${window.innerHeight * 0.01}px`
     );
     window.reader = this;
-  },
-  computed: {
-    isNight() {
-      return this.$store.getters.isNight;
-    },
-    autoTheme() {
-      return this.$store.getters.config.autoTheme;
-    },
-    dialogWidth() {
-      return this.$store.getters.dialogSmallWidth;
-    },
-    dialogTop() {
-      return this.$store.getters.dialogTop;
-    },
-    showLogin: {
-      get() {
-        return this.$store.state.showLogin;
-      },
-      set(value) {
-        this.$store.commit("setShowLogin", value);
-      }
-    },
-    connected() {
-      return this.$store.state.connected;
-    },
-    showBookInfo: {
-      get() {
-        return this.$store.state.showBookInfo;
-      },
-      set(val) {
-        this.$store.commit("setShowBookInfo", val);
-      }
-    }
+    this.checkAndApplyTheme();
   },
   watch: {
+    '$route'() {
+      // 路由变化时重新检测主题
+      this.checkAndApplyTheme();
+    },
     isNight(val) {
       this.setTheme(val);
     },
@@ -846,6 +820,13 @@ export default {
     },
     closeViewer() {
       this.$store.commit("setPreviewImgList", false);
+    },
+    checkAndApplyTheme() {
+      if (this.$route.path.includes('/kindle-web')) {
+        applyKindleTheme();
+      } else {
+        removeKindleTheme();
+      }
     }
   }
 };
@@ -1183,3 +1164,4 @@ export default {
   }
 }
 </style>
+

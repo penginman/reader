@@ -1,0 +1,154 @@
+/* Kindle组件专用样式 */
+
+/* 书架页面优化 */
+.kindle-theme .shelf-container {
+  background-color: var(--kindle-bg-color);
+  padding: var(--kindle-spacing-lg);
+}
+
+.kindle-theme .book-item {
+  border: var(--kindle-border-width) solid var(--kindle-border-color);
+  background-color: var(--kindle-bg-color);
+  margin: var(--kindle-spacing-sm);
+  padding: var(--kindle-spacing-md);
+}
+
+.kindle-theme .book-cover {
+  filter: grayscale(100%) contrast(1.2);
+  border: var(--kindle-border-width) solid var(--kindle-border-color);
+}
+
+/* 阅读器页面优化 */
+.kindle-theme .reader-container {
+  background-color: var(--kindle-bg-color);
+  color: var(--kindle-text-color);
+}
+
+.kindle-theme .chapter-content {
+  font-family: var(--kindle-font-family);
+  font-size: var(--kindle-font-size-large);
+  line-height: var(--kindle-line-height);
+  padding: var(--kindle-spacing-xl);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.kindle-theme .chapter-content h1,
+.kindle-theme .chapter-content h2,
+.kindle-theme .chapter-content h3 {
+  font-weight: bold;
+  margin: var(--kindle-spacing-lg) 0;
+  border-bottom: var(--kindle-border-width) solid var(--kindle-border-color);
+  padding-bottom: var(--kindle-spacing-sm);
+}
+
+.kindle-theme .chapter-content p {
+  margin: var(--kindle-spacing-md) 0;
+  text-indent: 2em;
+}
+
+/* 设置面板优化 */
+.kindle-theme .settings-panel {
+  background-color: var(--kindle-bg-color);
+  border: var(--kindle-border-width) solid var(--kindle-border-color);
+  box-shadow: var(--kindle-shadow);
+}
+
+.kindle-theme .settings-item {
+  border-bottom: var(--kindle-border-width) solid var(--kindle-border-color);
+  padding: var(--kindle-spacing-md);
+}
+
+.kindle-theme .settings-item:last-child {
+  border-bottom: none;
+}
+
+/* 导航栏优化 */
+.kindle-theme .navbar {
+  background-color: var(--kindle-bg-color);
+  border-bottom: var(--kindle-border-width) solid var(--kindle-border-color);
+  box-shadow: var(--kindle-shadow);
+}
+
+.kindle-theme .navbar-brand,
+.kindle-theme .nav-link {
+  color: var(--kindle-text-color) !important;
+  font-weight: normal;
+}
+
+/* 表单元素优化 */
+.kindle-theme .form-control {
+  background-color: var(--kindle-bg-color);
+  color: var(--kindle-text-color);
+  border: var(--kindle-border-width) solid var(--kindle-border-color);
+  border-radius: var(--kindle-border-radius);
+  font-size: var(--kindle-font-size-base);
+}
+
+.kindle-theme .form-control:focus {
+  border-color: var(--kindle-text-color);
+  box-shadow: var(--kindle-shadow);
+  background-color: var(--kindle-bg-color);
+}
+
+/* 模态框优化 */
+.kindle-theme .modal-content {
+  background-color: var(--kindle-bg-color);
+  border: var(--kindle-border-width) solid var(--kindle-border-color);
+  border-radius: var(--kindle-border-radius);
+}
+
+.kindle-theme .modal-header {
+  border-bottom: var(--kindle-border-width) solid var(--kindle-border-color);
+}
+
+.kindle-theme .modal-footer {
+  border-top: var(--kindle-border-width) solid var(--kindle-border-color);
+}
+
+/* 分页器优化 */
+.kindle-theme .pagination {
+  justify-content: center;
+}
+
+.kindle-theme .page-link {
+  background-color: var(--kindle-bg-color);
+  color: var(--kindle-text-color);
+  border: var(--kindle-border-width) solid var(--kindle-border-color);
+  padding: var(--kindle-spacing-sm) var(--kindle-spacing-md);
+  margin: 0 var(--kindle-spacing-xs);
+}
+
+.kindle-theme .page-link:hover {
+  background-color: var(--kindle-hover-color);
+  color: var(--kindle-text-color);
+}
+
+.kindle-theme .page-item.active .page-link {
+  background-color: var(--kindle-text-color);
+  color: var(--kindle-bg-color);
+  border-color: var(--kindle-text-color);
+}
+
+/* 加载状态优化 */
+.kindle-theme .loading {
+  color: var(--kindle-text-color);
+}
+
+.kindle-theme .spinner {
+  border-color: var(--kindle-border-color);
+  border-top-color: var(--kindle-text-color);
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .kindle-theme .chapter-content {
+    padding: var(--kindle-spacing-md);
+    font-size: var(--kindle-font-size-base);
+  }
+  
+  .kindle-theme .book-item {
+    margin: var(--kindle-spacing-xs);
+    padding: var(--kindle-spacing-sm);
+  }
+}

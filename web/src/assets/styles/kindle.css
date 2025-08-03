@@ -1,0 +1,94 @@
+/* Kindle主题样式 - E-ink屏幕优化 */
+
+/* 全局重置 */
+.kindle-theme * {
+  /* 移除所有动画和过渡效果 */
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  
+  /* 优化文本渲染 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 基础布局 */
+.kindle-theme body {
+  background-color: var(--kindle-bg-color);
+  color: var(--kindle-text-color);
+  font-family: var(--kindle-font-family);
+  font-size: var(--kindle-font-size-base);
+  line-height: var(--kindle-line-height);
+}
+
+/* 按钮样式 */
+.kindle-theme button,
+.kindle-theme .btn {
+  background-color: var(--kindle-bg-color);
+  color: var(--kindle-text-color);
+  border: var(--kindle-border-width) solid var(--kindle-border-color);
+  border-radius: var(--kindle-border-radius);
+  padding: var(--kindle-button-padding);
+  min-height: var(--kindle-button-height);
+  font-size: var(--kindle-font-size-base);
+  cursor: pointer;
+}
+
+.kindle-theme button:hover,
+.kindle-theme .btn:hover {
+  background-color: var(--kindle-hover-color);
+}
+
+.kindle-theme button:active,
+.kindle-theme .btn:active {
+  background-color: var(--kindle-active-color);
+}
+
+/* 输入框样式 */
+.kindle-theme input,
+.kindle-theme textarea,
+.kindle-theme select {
+  background-color: var(--kindle-bg-color);
+  color: var(--kindle-text-color);
+  border: var(--kindle-border-width) solid var(--kindle-border-color);
+  border-radius: var(--kindle-border-radius);
+  padding: var(--kindle-spacing-sm);
+  font-size: var(--kindle-font-size-base);
+}
+
+/* 链接样式 */
+.kindle-theme a {
+  color: var(--kindle-text-color);
+  text-decoration: underline;
+}
+
+/* 卡片和容器 */
+.kindle-theme .card,
+.kindle-theme .panel {
+  background-color: var(--kindle-bg-color);
+  border: var(--kindle-border-width) solid var(--kindle-border-color);
+  border-radius: var(--kindle-border-radius);
+  box-shadow: var(--kindle-shadow);
+}
+
+/* 阅读区域优化 */
+.kindle-theme .reader-content {
+  font-size: var(--kindle-font-size-large);
+  line-height: var(--kindle-line-height);
+  max-width: 100%;
+  padding: var(--kindle-spacing-lg);
+}
+
+/* 导航和菜单 */
+.kindle-theme .nav,
+.kindle-theme .menu {
+  background-color: var(--kindle-bg-color);
+  border-bottom: var(--kindle-border-width) solid var(--kindle-border-color);
+}
+
+/* 移除渐变和阴影 */
+.kindle-theme .gradient,
+.kindle-theme .shadow {
+  background: var(--kindle-bg-color) !important;
+  box-shadow: none !important;
+}

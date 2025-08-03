@@ -21,6 +21,18 @@ const routes = [
     name: "Reader",
     component: () =>
       import(/* webpackChunkName: "reader" */ "../views/Reader.vue")
+  },
+  {
+    path: "/kindle-web",
+    name: "KindleWeb",
+    component: () =>
+      import(/* webpackChunkName: "index" */ "../views/Index.vue")
+  },
+  {
+    path: "/kindle-web/test",
+    name: "KindleTest",
+    component: () =>
+      import(/* webpackChunkName: "kindle-test" */ "../views/KindleTest.vue")
   }
 ];
 
@@ -31,3 +43,5 @@ const router = new VueRouter({
 });
 
 export default router;
+
+

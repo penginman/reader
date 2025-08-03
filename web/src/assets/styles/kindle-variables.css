@@ -1,0 +1,32 @@
+/* Kindle主题CSS变量 */
+:root.kindle-theme {
+  /* 基础颜色 - E-ink优化 */
+  --kindle-bg-color: #ffffff;
+  --kindle-text-color: #000000;
+  --kindle-border-color: #000000;
+  --kindle-hover-color: #f0f0f0;
+  --kindle-active-color: #e0e0e0;
+  
+  /* 字体设置 */
+  --kindle-font-size-base: 18px;
+  --kindle-font-size-large: 22px;
+  --kindle-font-size-small: 16px;
+  --kindle-line-height: 1.6;
+  --kindle-font-family: "Times New Roman", serif;
+  
+  /* 间距设置 */
+  --kindle-spacing-xs: 4px;
+  --kindle-spacing-sm: 8px;
+  --kindle-spacing-md: 16px;
+  --kindle-spacing-lg: 24px;
+  --kindle-spacing-xl: 32px;
+  
+  /* 布局设置 */
+  --kindle-border-radius: 0px;
+  --kindle-border-width: 1px;
+  --kindle-shadow: none;
+  
+  /* 按钮设置 */
+  --kindle-button-height: 44px;
+  --kindle-button-padding: 12px 20px;
+}
